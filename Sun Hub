@@ -103,6 +103,7 @@ AutoFarmInside.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AutoFarmInside.BackgroundTransparency = 1.000
 AutoFarmInside.Position = UDim2.new(0.591880262, 0, 0.499677151, 0)
 AutoFarmInside.Size = UDim2.new(0.816239417, 0, 0.999354362, 0)
+AutoFarmInside.Visible = false
 AutoFarmInside.ZIndex = 2
 
 TextLabel.Parent = AutoFarmInside
@@ -395,7 +396,6 @@ MenuInside.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 MenuInside.BackgroundTransparency = 1.000
 MenuInside.Position = UDim2.new(0.591880262, 0, 0.499677151, 0)
 MenuInside.Size = UDim2.new(0.816239417, 0, 0.999354362, 0)
-MenuInside.Visible = false
 MenuInside.ZIndex = 2
 
 Sun.Name = "Sun"
@@ -408,7 +408,7 @@ Sun.Position = UDim2.new(0.412112266, 0, 0.318862021, 0)
 Sun.Size = UDim2.new(0.2469441, 0, 0.349659592, 0)
 Sun.ZIndex = 2
 Sun.Font = Enum.Font.GothamBold
-Sun.Text = "â˜€"
+Sun.Text = "☀"
 Sun.TextColor3 = Color3.fromRGB(255, 255, 255)
 Sun.TextScaled = true
 Sun.TextSize = 14.000
@@ -544,7 +544,7 @@ TextLabel_8.Position = UDim2.new(0.185632482, 0, 0.0450000018, 0)
 TextLabel_8.Size = UDim2.new(0.135357618, 0, 0.0612796955, 0)
 TextLabel_8.ZIndex = 10
 TextLabel_8.Font = Enum.Font.SourceSansBold
-TextLabel_8.Text = "â˜€"
+TextLabel_8.Text = "☀"
 TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.TextScaled = true
 TextLabel_8.TextSize = 14.000
@@ -600,17 +600,19 @@ TextLabel_10.TextSize = 14.000
 TextLabel_10.TextWrapped = true
 
 Circle.Name = "Circle"
-Circle.Parent = game.Workspace.Main.CircleClick
+Circle.Parent = game.Players.LocalPlayer.PlayerGui.Main
 Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Circle.BackgroundTransparency = 1.000
 Circle.ZIndex = 10
 Circle.Image = "rbxassetid://266543268"
 Circle.ImageTransparency = 0.900
 
-ImageLabel_4.Parent = game.Workspace.Main.CircleClick
+ImageLabel_4.Parent = game.Players.LocalPlayer.PlayerGui.Main
 ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_4.Size = UDim2.new(0, 100, 0, 100)
 ImageLabel_4.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+ImageLabel_4.Transparency = 1
+ImageLabel_4.ImageTransparency = 1
 
 On.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 170, 0)), ColorSequenceKeypoint.new(0.48, Color3.fromRGB(255, 177, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 247, 0))}
 On.Rotation = -90
@@ -664,7 +666,7 @@ end
 
 -- Scripts:
 
-local function QKSJNI_fake_script() -- StrawberryOn.CircleClickExample 
+local function EGSP_fake_script() -- StrawberryOn.CircleClickExample 
 	local script = Instance.new('LocalScript', StrawberryOn)
 	local req = require
 	local require = function(obj)
@@ -676,7 +678,7 @@ local function QKSJNI_fake_script() -- StrawberryOn.CircleClickExample
 	end
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local CircleClick = require(game.Workspace.Main.Main:WaitForChild("CircleClick")) 
+	local CircleClick = require(game.Players.LocalPlayer.PlayerGui.Main:WaitForChild("CircleClick")) 
 	
 	script.Parent.MouseButton1Down:connect(function()
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
@@ -684,7 +686,7 @@ local function QKSJNI_fake_script() -- StrawberryOn.CircleClickExample
 	
 end
 
-local function SPOT_fake_script() -- StrawberryOn.LocalScript 
+local function LAWF_fake_script() -- StrawberryOn.LocalScript 
 	local script = Instance.new('LocalScript', StrawberryOn)
 	local req = require
 	local require = function(obj)
@@ -711,8 +713,6 @@ local function SPOT_fake_script() -- StrawberryOn.LocalScript
 				script.Parent.ImageLabel:TweenPosition(UDim2.new(0.114, 0,0.477, 0))
 				script.Parent.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
 				--[[]]--
-				local HRP = plr.Character['HumanoidRootPart']
-				HRP.CFrame = CFrame.new(spawnpart.CFrame.p) + Vector3.new(0,5,0)
 			end,
 			[false]=function()
 				on=true
@@ -720,8 +720,6 @@ local function SPOT_fake_script() -- StrawberryOn.LocalScript
 				script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				game.Workspace.Main.CircleClick.ImageLabel.On:Clone().Parent = script.Parent
 				--[[]]--
-				local HRP = plr.Character['HumanoidRootPart']
-				HRP.CFrame=CFrame.new(part.CFrame.p)+Vector3.new(0,5,0)
 			end,
 		}
 		x[on]()
@@ -737,8 +735,42 @@ local function SPOT_fake_script() -- StrawberryOn.LocalScript
 	end)
 	--[[]]--
 end
-coroutine.wrap(SPOT_fake_script)()
-local function CSPFQF_fake_script() -- SunflowerOn.CircleClickExample 
+coroutine.wrap(LAWF_fake_script)()
+local function XGLCQU_fake_script() -- StrawberryOn.LocalScript 
+	local script = Instance.new('LocalScript', StrawberryOn)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	local teleport_table = {
+		["Strawberry Field"] = Vector3.new(-57.817, 20, -62.916, -0, -0, 0)
+	}
+	
+	local tween_s = game:GetService('TweenService')
+	local tweeninfo = TweenInfo.new(2.3,Enum.EasingStyle.Linear)
+	
+	local lp = game.Players.LocalPlayer
+	
+	function bypass_teleport(v)
+	script.Parent.MouseButton1Click:Connect(function()
+		if lp.Character and
+			lp.Character:FindFirstChild('HumanoidRootPart') then
+		    local cf = CFrame.new(v)
+			local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+			a:Play()
+		end
+	  end)
+	end
+	
+	bypass_teleport(teleport_table["Strawberry Field"])
+end
+coroutine.wrap(XGLCQU_fake_script)()
+local function TXYQVD_fake_script() -- SunflowerOn.CircleClickExample 
 	local script = Instance.new('LocalScript', SunflowerOn)
 	local req = require
 	local require = function(obj)
@@ -755,10 +787,10 @@ local function CSPFQF_fake_script() -- SunflowerOn.CircleClickExample
 	script.Parent.MouseButton1Down:connect(function()
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
 	end)
-	
+ 
 end
-coroutine.wrap(CSPFQF_fake_script)()
-local function OJGQIS_fake_script() -- SunflowerOn.LocalScript 
+coroutine.wrap(TXYQVD_fake_script)()
+local function AKGJZ_fake_script() -- SunflowerOn.LocalScript 
 	local script = Instance.new('LocalScript', SunflowerOn)
 	local req = require
 	local require = function(obj)
@@ -785,8 +817,6 @@ local function OJGQIS_fake_script() -- SunflowerOn.LocalScript
 				script.Parent.ImageLabel:TweenPosition(UDim2.new(0.114, 0,0.477, 0))
 				script.Parent.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
 				--[[]]--
-				local HRP = plr.Character['HumanoidRootPart']
-				HRP.CFrame = CFrame.new(spawnpart.CFrame.p) + Vector3.new(0,5,0)
 			end,
 			[false]=function()
 				on=true
@@ -794,8 +824,6 @@ local function OJGQIS_fake_script() -- SunflowerOn.LocalScript
 				script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				game.Workspace.Main.CircleClick.ImageLabel.On:Clone().Parent = script.Parent
 				--[[]]--
-				local HRP = plr.Character['HumanoidRootPart']
-				HRP.CFrame=CFrame.new(part.CFrame.p)+Vector3.new(0,5,0)
 			end,
 		}
 		x[on]()
@@ -811,8 +839,42 @@ local function OJGQIS_fake_script() -- SunflowerOn.LocalScript
 	end)
 	--[[]]--
 end
-coroutine.wrap(OJGQIS_fake_script)()
-local function QAVW_fake_script() -- ImageButton.CircleClickExample 
+coroutine.wrap(AKGJZ_fake_script)()
+local function PZLFRNW_fake_script() -- SunflowerOn.LocalScript 
+	local script = Instance.new('LocalScript', SunflowerOn)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	local teleport_table = {
+		["Sunflower Field"] = Vector3.new(8.365, 20, -62.916, -0, -1, 0)
+	}
+	
+	local tween_s = game:GetService('TweenService')
+	local tweeninfo = TweenInfo.new(2.3,Enum.EasingStyle.Linear)
+	
+	local lp = game.Players.LocalPlayer
+	
+	function bypass_teleport(v)
+	script.Parent.MouseButton1Click:Connect(function()
+		if lp.Character and
+			lp.Character:FindFirstChild('HumanoidRootPart') then
+		    local cf = CFrame.new(v)
+			local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+			a:Play()	
+		end
+	  end)
+	end
+	
+	bypass_teleport(teleport_table["Sunflower Field"])
+end
+coroutine.wrap(PZLFRNW_fake_script)()
+local function KCYFMYR_fake_script() -- ImageButton.CircleClickExample 
 	local script = Instance.new('LocalScript', ImageButton)
 	local req = require
 	local require = function(obj)
@@ -831,8 +893,8 @@ local function QAVW_fake_script() -- ImageButton.CircleClickExample
 	end)
 	
 end
-coroutine.wrap(QAVW_fake_script)()
-local function DTURKA_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(KCYFMYR_fake_script)()
+local function AUMAHK_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 	local req = require
 	local require = function(obj)
@@ -847,8 +909,8 @@ local function DTURKA_fake_script() -- ImageButton.LocalScript
 		script.Parent.Parent.Fields.Visible = true
 	end)
 end
-coroutine.wrap(DTURKA_fake_script)()
-local function WLWFAZY_fake_script() -- StrawberryField.CircleClickExample 
+coroutine.wrap(AUMAHK_fake_script)()
+local function LXIBM_fake_script() -- StrawberryField.CircleClickExample 
 	local script = Instance.new('LocalScript', StrawberryField)
 	local req = require
 	local require = function(obj)
@@ -867,8 +929,8 @@ local function WLWFAZY_fake_script() -- StrawberryField.CircleClickExample
 	end)
 	
 end
-coroutine.wrap(WLWFAZY_fake_script)()
-local function KHQOJ_fake_script() -- StrawberryField.LocalScript 
+coroutine.wrap(LXIBM_fake_script)()
+local function LCYL_fake_script() -- StrawberryField.LocalScript 
 	local script = Instance.new('LocalScript', StrawberryField)
 	local req = require
 	local require = function(obj)
@@ -893,8 +955,8 @@ local function KHQOJ_fake_script() -- StrawberryField.LocalScript
 		script.Parent.Parent.Parent.Parent.Parent["Choose Field"].Visible = true
 	end)
 end
-coroutine.wrap(KHQOJ_fake_script)()
-local function LKSHE_fake_script() -- SunflowerField.CircleClickExample 
+coroutine.wrap(LCYL_fake_script)()
+local function WHIPECS_fake_script() -- SunflowerField.CircleClickExample 
 	local script = Instance.new('LocalScript', SunflowerField)
 	local req = require
 	local require = function(obj)
@@ -913,8 +975,8 @@ local function LKSHE_fake_script() -- SunflowerField.CircleClickExample
 	end)
 	
 end
-coroutine.wrap(LKSHE_fake_script)()
-local function CAACU_fake_script() -- SunflowerField.LocalScript 
+coroutine.wrap(WHIPECS_fake_script)()
+local function JOGBKMX_fake_script() -- SunflowerField.LocalScript 
 	local script = Instance.new('LocalScript', SunflowerField)
 	local req = require
 	local require = function(obj)
@@ -939,8 +1001,8 @@ local function CAACU_fake_script() -- SunflowerField.LocalScript
 		script.Parent.Parent.Parent.Parent.Parent["Choose Field"].Visible = true
 	end)
 end
-coroutine.wrap(CAACU_fake_script)()
-local function CLFVSI_fake_script() -- Donate.CircleClickExample 
+coroutine.wrap(JOGBKMX_fake_script)()
+local function XDVCL_fake_script() -- Donate.CircleClickExample 
 	local script = Instance.new('LocalScript', Donate)
 	local req = require
 	local require = function(obj)
@@ -959,8 +1021,8 @@ local function CLFVSI_fake_script() -- Donate.CircleClickExample
 	end)
 	
 end
-coroutine.wrap(CLFVSI_fake_script)()
-local function TEQEPW_fake_script() -- Server.CircleClickExample 
+coroutine.wrap(XDVCL_fake_script)()
+local function AFVGJ_fake_script() -- Server.CircleClickExample 
 	local script = Instance.new('LocalScript', Server)
 	local req = require
 	local require = function(obj)
@@ -979,8 +1041,8 @@ local function TEQEPW_fake_script() -- Server.CircleClickExample
 	end)
 	
 end
-coroutine.wrap(TEQEPW_fake_script)()
-local function HJOE_fake_script() -- AutoFarm.CircleClickExample 
+coroutine.wrap(AFVGJ_fake_script)()
+local function DFYGAWN_fake_script() -- AutoFarm.CircleClickExample 
 	local script = Instance.new('LocalScript', AutoFarm)
 	local req = require
 	local require = function(obj)
@@ -999,8 +1061,8 @@ local function HJOE_fake_script() -- AutoFarm.CircleClickExample
 	end)
 	
 end
-coroutine.wrap(HJOE_fake_script)()
-local function EYSWYTF_fake_script() -- AutoFarm.LocalScript 
+coroutine.wrap(DFYGAWN_fake_script)()
+local function DAHA_fake_script() -- AutoFarm.LocalScript 
 	local script = Instance.new('LocalScript', AutoFarm)
 	local req = require
 	local require = function(obj)
@@ -1016,8 +1078,8 @@ local function EYSWYTF_fake_script() -- AutoFarm.LocalScript
 		script.Parent.Parent.AutoFarmInside.Visible = true
 	end)
 end
-coroutine.wrap(EYSWYTF_fake_script)()
-local function BBXLJN_fake_script() -- Menu.LocalScript 
+coroutine.wrap(DAHA_fake_script)()
+local function APJV_fake_script() -- Menu.LocalScript 
 	local script = Instance.new('LocalScript', Menu)
 	local req = require
 	local require = function(obj)
@@ -1033,8 +1095,8 @@ local function BBXLJN_fake_script() -- Menu.LocalScript
 		script.Parent.Parent.AutoFarmInside.Visible = false
 	end)
 end
-coroutine.wrap(BBXLJN_fake_script)()
-local function HAFXNCN_fake_script() -- Menu.CircleClickExample 
+coroutine.wrap(APJV_fake_script)()
+local function GNXUADG_fake_script() -- Menu.CircleClickExample 
 	local script = Instance.new('LocalScript', Menu)
 	local req = require
 	local require = function(obj)
@@ -1046,11 +1108,11 @@ local function HAFXNCN_fake_script() -- Menu.CircleClickExample
 	end
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local CircleClick = require(game.Workspace.Main:WaitForChild("CircleClick")) 
+	local CircleClick = require(game.Workspace.Main:WaitForChild("CircleClick"))
 	
 	script.Parent.MouseButton1Down:connect(function()
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
 	end)
 	
 end
-coroutine.wrap(HAFXNCN_fake_script)()
+coroutine.wrap(GNXUADG_fake_script)()
