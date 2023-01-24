@@ -633,7 +633,7 @@ do -- Main.CircleClick
 				
 				Button.ClipsDescendants = true
 				
-				local Circle = script:WaitForChild("Circle"):Clone()
+				local Circle = game.Players.LocalPlayer.PlayerGui.Main:WaitForChild("Circle"):Clone()
 					Circle.Parent = Button
 					local NewX = X - Circle.AbsolutePosition.X
 					local NewY = Y - Circle.AbsolutePosition.Y
@@ -718,7 +718,7 @@ local function LAWF_fake_script() -- StrawberryOn.LocalScript
 				on=true
 				script.Parent.ImageLabel:TweenPosition(UDim2.new(0.894, 0,0.477, 0))
 				script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				game.Workspace.Main.CircleClick.ImageLabel.On:Clone().Parent = script.Parent
+				game.Players.LocalPlayer.PlayerGui.Main.ImageLabel.On:Clone().Parent = script.Parent
 				--[[]]--
 			end,
 		}
@@ -748,7 +748,7 @@ local function XGLCQU_fake_script() -- StrawberryOn.LocalScript
 	end
 
 	local teleport_table = {
-		["Strawberry Field"] = Vector3.new(-57.817, 20, -62.916, -0, -0, 0)
+		["Strawberry Field"] = Vector3.new(-178.174973, 18.1322384, -9.8549881, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 	}
 	
 	local tween_s = game:GetService('TweenService')
@@ -782,7 +782,7 @@ local function TXYQVD_fake_script() -- SunflowerOn.CircleClickExample
 	end
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local CircleClick = require(game.Workspace.Main:WaitForChild("CircleClick")) 
+	local CircleClick = require(game.Players.LocalPlayer.PlayerGui.Main:WaitForChild("CircleClick")) 
 	
 	script.Parent.MouseButton1Down:connect(function()
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
@@ -822,7 +822,7 @@ local function AKGJZ_fake_script() -- SunflowerOn.LocalScript
 				on=true
 				script.Parent.ImageLabel:TweenPosition(UDim2.new(0.894, 0,0.477, 0))
 				script.Parent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-				game.Workspace.Main.CircleClick.ImageLabel.On:Clone().Parent = script.Parent
+				game.Players.LocalPlayer.PlayerGui.Main.ImageLabel.On:Clone().Parent = script.Parent
 				--[[]]--
 			end,
 		}
@@ -852,7 +852,7 @@ local function PZLFRNW_fake_script() -- SunflowerOn.LocalScript
 	end
 
 	local teleport_table = {
-		["Sunflower Field"] = Vector3.new(8.365, 20, -62.916, -0, -1, 0)
+		["Sunflower Field"] = Vector3.new(-208.951294, 1.5, 176.579224, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 	}
 	
 	local tween_s = game:GetService('TweenService')
@@ -886,7 +886,7 @@ local function KCYFMYR_fake_script() -- ImageButton.CircleClickExample
 	end
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local CircleClick = require(game.Workspace.Main:WaitForChild("CircleClick")) 
+	local CircleClick = require(game.Players.LocalPlayer.PlayerGui.Main:WaitForChild("CircleClick")) 
 	
 	script.Parent.MouseButton1Down:connect(function()
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
@@ -922,7 +922,7 @@ local function LXIBM_fake_script() -- StrawberryField.CircleClickExample
 	end
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local CircleClick = require(game.Workspace.Main:WaitForChild("CircleClick")) 
+	local CircleClick = require(game.Players.LocalPlayer.PlayerGui.Main:WaitForChild("CircleClick")) 
 	
 	script.Parent.MouseButton1Down:connect(function()
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
@@ -968,7 +968,7 @@ local function WHIPECS_fake_script() -- SunflowerField.CircleClickExample
 	end
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local CircleClick = require(game.Workspace.Main:WaitForChild("CircleClick")) 
+	local CircleClick = require(game.Players.LocalPlayer.PlayerGui.Main:WaitForChild("CircleClick")) 
 	
 	script.Parent.MouseButton1Down:connect(function()
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
@@ -1014,7 +1014,7 @@ local function XDVCL_fake_script() -- Donate.CircleClickExample
 	end
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local CircleClick = require(game.Workspace.Main:WaitForChild("CircleClick")) 
+	local CircleClick = require(game.Players.LocalPlayer.PlayerGui.Main:WaitForChild("CircleClick")) 
 	
 	script.Parent.MouseButton1Down:connect(function()
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
@@ -1034,7 +1034,7 @@ local function AFVGJ_fake_script() -- Server.CircleClickExample
 	end
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local CircleClick = require(game.Workspace.Main:WaitForChild("CircleClick")) 
+	local CircleClick = require(game.Players.LocalPlayer.PlayerGui.Main:WaitForChild("CircleClick")) 
 	
 	script.Parent.MouseButton1Down:connect(function()
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
@@ -1054,7 +1054,7 @@ local function DFYGAWN_fake_script() -- AutoFarm.CircleClickExample
 	end
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local CircleClick = require(game.Workspace.Main:WaitForChild("CircleClick")) 
+	local CircleClick = require(game.Players.LocalPlayer.PlayerGui.Main:WaitForChild("CircleClick")) 
 	
 	script.Parent.MouseButton1Down:connect(function()
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
@@ -1108,7 +1108,7 @@ local function GNXUADG_fake_script() -- Menu.CircleClickExample
 	end
 
 	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local CircleClick = require(game.Workspace.Main:WaitForChild("CircleClick"))
+	local CircleClick = require(game.Players.LocalPlayer.PlayerGui.Main:WaitForChild("CircleClick"))
 	
 	script.Parent.MouseButton1Down:connect(function()
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
